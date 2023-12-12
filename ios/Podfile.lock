@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_youtube_view (1.1.4):
+    - Flutter
+    - YoutubeKit
+  - YoutubeKit (0.8.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_youtube_view (from `.symlinks/plugins/flutter_youtube_view/ios`)
+
+SPEC REPOS:
+  trunk:
+    - YoutubeKit
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_youtube_view:
+    :path: ".symlinks/plugins/flutter_youtube_view/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_youtube_view: ea93f139b374c5e2b869b3e84190c4ba9668601b
+  YoutubeKit: 22d35bb9f52bf403cecf37424c67e3399ca4d412
+
+PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+
+COCOAPODS: 1.12.1
