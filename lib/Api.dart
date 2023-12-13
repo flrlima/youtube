@@ -12,8 +12,6 @@ class Api {
     http.Response response = await http.get(Uri.parse(
         "${URL_BASE_YOUTUBE}search?part=snippet&type=video&maxResults=20&order=date&key=$CHAVE_YOUTUBE_API&channelId=$ID_CANAL&q=$pesquisa"));
 
-    print(json.decode(response.body));
-
     Map<String, dynamic> dadosJson = json.decode(response.body);
 
     List<Video> videos = dadosJson["items"].map<Video>((map) {

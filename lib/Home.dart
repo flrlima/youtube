@@ -13,6 +13,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String _resultado = "";
   int _selectedIndex = 0;
   void _onItemTapped(int index) {
     setState(() {
@@ -22,9 +23,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    String resultado = "";
     List<Widget> telas = [
-      const Inicio(),
+      Inicio(_resultado),
       const EmAlta(),
       const Inscricao(),
       const Biblioteca(),
@@ -66,16 +66,14 @@ class _HomeState extends State<Home> {
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () async {
-              String res = showSearch(
+              String? res = await showSearch(
                 context: context,
                 delegate: CustomSearchDelegate(),
-              ).toString();
+              );
 
               setState(() {
-                resultado = res;
+                _resultado = res!;
               });
-
-              print("resultado digitado: $res");
             },
           ),
         ],

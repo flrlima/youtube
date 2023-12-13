@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomSearchDelegate extends SearchDelegate<String> {
   @override
-  List<Widget>? buildActions(BuildContext context) {
+  List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
         icon: const Icon(Icons.close),
@@ -25,9 +25,10 @@ class CustomSearchDelegate extends SearchDelegate<String> {
 
   @override
   Widget buildResults(BuildContext context) {
-    // WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-    close(context, query);
-    // });
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      // SchedulerBinding.instance.addPostFrameCallback((_) {
+      close(context, query);
+    });
     return Container();
   }
 
